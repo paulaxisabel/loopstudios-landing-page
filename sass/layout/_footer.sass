@@ -1,0 +1,34 @@
+.footer
+  background-color: $col-black
+  &>.container
+    display: flex
+    flex-direction: column
+    text-align: center
+    @media screen and (min-width: 768px)
+      text-align: left
+      flex-direction: row
+      justify-content: space-between
+      padding-top: 4.7rem
+      padding-bottom: 2rem
+  &__nav
+    &__logo
+      margin-bottom: 2.3rem
+      width: 14.5rem
+    &__list
+      display: flex
+      flex-direction: column
+      @media screen and (min-width: 768px)
+        flex-direction: row
+    &__item
+      margin-bottom: 2.5rem
+      @media screen and (min-width: 768px)
+        margin-bottom: 0
+        margin-right: 3.2rem
+  &__socials
+    display: flex
+    justify-content: center
+    margin: 5rem 0 2.5rem
+    gap: 1.6rem
+    @media screen and (min-width: 768px)
+      justify-content: flex-end
+      margin: 0 0 2.3rem

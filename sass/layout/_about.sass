@@ -1,0 +1,37 @@
+.about
+  margin-bottom: 8rem
+  @media screen and (min-width: 768px)
+    margin-bottom: 12rem
+  &>.container
+    display: flex
+    flex-direction: column
+    text-align: center
+    @media screen and (min-width: 768px)
+      flex-direction: row
+      position: relative
+      text-align: left
+  &__img
+    background-image: url(../images/mobile/image-interactive.jpg)
+    background-size: cover
+    background-position: center
+    margin: auto
+    margin-bottom: 7rem
+    height: 37rem
+    width: 100%
+    max-width: 55rem
+    @media screen and (min-width: 768px)
+      background-image: url(../images/desktop/image-interactive.jpg)
+      margin: 0
+      height: 50.5rem
+      width: 66%
+      max-width: none
+  &__content
+    @media screen and (min-width: 768px)
+      background-color: $col-white
+      position: absolute
+      bottom: 0
+      right: 0
+      padding: 5rem 4rem 0
+      width: 54.5rem
+    @media screen and (min-width: 992px)
+      padding: 9.5rem 0 0 9.6rem

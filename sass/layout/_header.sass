@@ -1,0 +1,86 @@
+.header
+  background-image: url(../images/mobile/image-hero.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+  margin-bottom: 9.7rem
+  height: 65.5rem
+  @media screen and (min-width: 768px)
+    background-image: url(../images/desktop/image-hero.jpg)
+    background-position-x: center
+  &__logo
+    z-index: 10
+    & img
+      width: 14.3rem
+      @media screen and (min-width: 768px)
+        width: 100%
+  &__nav
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__links
+    &.open
+      left: 0
+    @media screen and (max-width: 767px)
+      transition: $transition left
+      background-color: $col-black
+      display: flex
+      flex-direction: column
+      gap: 2.4rem
+      padding: 22.5rem 2.4rem 0
+      top: 0
+      left: 0
+      left: -100%
+      position: absolute
+      height: 100vh
+      width: 100%
+      z-index: 5
+    @media screen and (min-width: 768px)
+      display: flex
+      flex-direction: row
+      gap: 3rem
+      padding: 0
+      
+  &__hamburger
+    cursor: pointer
+    width: 2.4rem
+    z-index: 10
+    @media screen and (min-width: 768px)
+      display: none
+    &:before,
+    &:after,
+    & div
+      background: $col-white
+      content: ''
+      display: block
+      height: 0.2rem
+      margin: 0.6rem 0
+      transition: 0.35s
+    &.open::before
+      transform: translateY(1rem) rotate(135deg)
+    &.open::after
+      transform: translateY(-0.5rem) rotate(-135deg)
+    &.open div
+      transform: scale(0)
+
+.disable-scroll
+  @media only screen and (max-width: 767px)
+    overflow: hidden
+
+.hero
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 100%
+  @media screen and (min-width: 768px)
+    justify-content: start
+  &__heading
+    border: 2px solid white
+    padding: 2.35rem 2.2rem
+    height: 20rem
+    max-width: 32.5rem
+    transform: translateY(-2.4rem)
+    @media screen and (min-width: 768px)
+      padding-top: 3.8rem 
+      padding-left: 3.9rem
+      height: 28rem
+      max-width: 65.6rem

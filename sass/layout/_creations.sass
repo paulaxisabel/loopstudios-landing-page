@@ -1,0 +1,69 @@
+.creations
+  margin-bottom: 13rem
+  @media screen and (min-width: 768px)
+    margin-bottom: 18.7rem
+  &>.container
+    display: flex
+    flex-direction: column
+    text-align: center
+    @media screen and (min-width: 992px)
+      text-align: left
+  &__heading
+    display: flex
+    justify-content: space-between
+    margin: auto
+    @media screen and (min-width: 768px)
+      margin: 0
+      margin-bottom: 5.2rem
+  &__projects
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: repeat(8, 1fr)
+    gap: 3rem
+    @media screen and (min-width: 576px)
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: repeat(4, 1fr)
+    @media screen and (min-width: 992px)
+      grid-template-columns: repeat(4, 1fr)
+      grid-template-rows: repeat(2, 1fr)
+  &__project
+    cursor: pointer
+    position: relative
+    height: 12rem
+    transition: 0.5s ease
+    @media screen and (min-width: 992px)
+      height: 45.3rem
+    & picture img
+      object-fit: cover
+      height: 12rem
+      width: 100%
+      @media screen and (min-width: 992px)
+        height: 45.3rem
+    &::before
+      background-color: $col-white
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      opacity: 0
+      transition: 0.5s ease
+    &:hover
+      transform: scale(1.02)
+      &::before
+        opacity: 0.4
+      &>.creations__project__name
+        font-weight: bold
+        transition: 0.5s ease
+        color: black       
+    &__name
+      position: absolute
+      text-align: left
+      left: 4.2rem
+      bottom: 3.2rem
+      max-width: 17rem
+      z-index: 2
+      @media screen and (min-width: 992px)
+        left: 4rem
+        bottom: 3.4rem

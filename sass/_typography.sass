@@ -1,0 +1,75 @@
+body
+  font-family: $font-body
+  font-size: 1.5rem
+
+.t-h1, .t-h2, .t-h3
+  font-family: $font-heading
+  font-weight: $light
+  text-transform: uppercase
+
+.t-h1
+  color: $col-white
+  font-size: 4rem
+  line-height: 4rem
+  @media screen and (min-width: 768px)
+    font-size: 7rem
+    line-height: 7rem
+    letter-spacing: 0.18rem
+  
+.t-h2
+  font-size: 3.2rem
+  margin-bottom: 2.8rem
+  letter-spacing: 0.04rem
+  @media screen and (min-width: 992px)
+    font-size: 4.8rem
+
+.t-h3
+  color: $col-white
+  font-size: 2.4rem
+  @media screen and (min-width: 768px)
+    font-size: 3.2rem
+
+.t-p
+  color: $col-dark-gray
+  font-family: $font-body
+  font-weight: $regular
+  line-height: 2.6rem
+  letter-spacing: 0.01rem
+
+.t-link
+  color: $col-white
+  font-size: 1.5rem
+  font-family: $font-heading
+  font-weight: bold
+  letter-spacing: 0.07rem
+  position: relative
+  &::before
+    background: $col-white
+    bottom: -0.8rem
+    content: ''
+    height: 0.2rem
+    left: 50%
+    position: absolute
+    transform: translateX(-50%)
+    transition: $transition
+    width: 0
+  &:hover::before
+    width: 2.4rem
+  &--header
+    @media screen and (max-width: 767px)
+      font-size: 2.5rem
+      font-weight: $light
+      letter-spacing: -0.5px
+      text-transform: uppercase
+      transition: $transition transform
+      &:hover
+        transform: translateX(1.5rem)
+      &::before
+        display: none
+
+.t-copyright
+  color: $col-dark-gray
+  font-family: $font-body
+  letter-spacing: 0.01rem
+  margin-bottom: 3.2rem
+  
